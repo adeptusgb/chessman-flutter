@@ -6,7 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'home_page.dart';
 
 class BMICalculatorPage extends StatefulWidget {
-  const BMICalculatorPage({Key? key}) : super(key: key);
+  const BMICalculatorPage({super.key});
 
   @override
   State<BMICalculatorPage> createState() => _BMICalculatorPageState();
@@ -151,7 +151,7 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
       builder: (context) {
         return AlertDialog(
           title: const Text('Registros Salvos'),
-          content: Container(
+          content: SizedBox(
             width: double.maxFinite,
             child: ListView.builder(
               shrinkWrap: true,
@@ -164,7 +164,7 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
 
                 return ListTile(
                   title: Text('IMC: ${record['bmi'].toStringAsFixed(2)}'),
-                  subtitle: Text('$formattedDate'),
+                  subtitle: Text(formattedDate),
                   onTap: () {
                     loadRecord(record);
                     Navigator.pop(context);

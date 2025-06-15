@@ -4,7 +4,7 @@ import 'package:project/db/meal_db.dart';
 import 'package:project/pages/navigation_page.dart';
 
 class DietaPage extends StatefulWidget {
-  const DietaPage({Key? key}) : super(key: key);
+  const DietaPage({super.key});
 
   @override
   State<DietaPage> createState() => _DietaPageState();
